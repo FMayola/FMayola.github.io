@@ -3,9 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Francesc Mayola Bertran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        html{
+            scroll-behavior: smooth;
+            font-family: "Sora", sans-serif !important;
+        }
+        .sora{
+            /* @apply */
+            font-family: "Sora", sans-serif;
+        }
+        .social{
+            @apply rounded;
+            @apply p-4;
+            @apply border-2;
+            @apply border-black;
+        }
+        .skills{
+            @apply rounded;
+            @apply font-bold;
+            @apply text-[20px];
+            @apply border-2;
+            @apply border-black;
+            @apply flex;
+            @apply flex-col;
+            @apply items-center;
+            @apply gap-7;
+            flex: 1 1 12%;
+            max-width: 12%;
+            min-width: 150px;
+            min-height: 150px;
+            box-sizing: border-box;
+            aspect-ratio: 1 / 1;
+            justify-content: center;
+        }
+        .exp{
+            @apply rounded-md;
+            border-color: #71717A;
+            @apply border-[1px];
+            @apply w-full;
+            @apply text-[24px];
+            @apply p-6;
+            @apply grid;
+            @apply grid-cols-3;
+            @apply grid-rows-2;
+            @apply gap-4;
+        }
+        .exp h3{
+            @apply col-span-2;
+            @apply col-start-1;
+            @apply row-start-1;
+            @apply font-bold;
+        }
+        .exp p:nth-of-type(1) {
+            @apply col-start-3;
+            @apply row-start-1;
+            @apply text-right;
+            color: #D4D4D8;
+            @apply text-[16px];
+            @apply font-semibold;
+        }
+        .exp p:nth-of-type(2) {
+            @apply col-span-3;
+            @apply col-start-1;
+            @apply row-start-2;
+            @apply text-[16px];
+            color: #D4D4D8;
+        }
+        .proj{
+            @apply rounded-md;
+            @apply border-[1px];
+            @apply border-black;
+            @apply w-10/12;
+            @apply p-6;
+            @apply flex;
+            @apply flex-row;
+            @apply gap-15;
+        }
+        .proj img{
+            @apply w-1/2;
+            @apply h-full;
+            @apply rounded-3xl;
+        }
+        .proj div{
+            @apply w-1/2;
+            @apply flex;
+            @apply flex-col;
+            @apply gap-4;
+        }
+        .proj div h3{
+            @apply text-[48px];
+            @apply font-extrabold;
+        }
+        .proj div h4{
+            @apply text-[32px];
+            @apply font-bold;
+        }
+        .proj div p{
+            @apply text-[16px];
+            @apply text-[#71717A];
+        }
+        .proj div a img{
+            @apply w-4;
+            @apply h-full;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>hello world</h1>
+    <div id="header" class=" text-[20px] flex flex-nowrap mb-10 pt-4 pb-4">
+        <div class="flex flex-nowrap items-center justify-center w-1/4 font-bold"><img src="/public/img/logo_1.svg" alt="logo">Personal</div>
+        <div class="flex flex-nowrap items-center justify-evenly w-2/4 font-semibold">
+            <a href="#aboutme">About Me</a>
+            <a href="#skills">Skils</a>
+            <a href="#projects">Projects</a>
+            <a href="#contactme">Contact Me</a>
+        </div>
+        <div class="w-1/4 flex items-center justify-center">
+            <button class="flex flex-nowrap justify-around font-semibold items-center bg-black p-3 h-3/4 rounded text-white" onclick="print()">Resume <svg viewBox="0 0 24 24"  class="size-5 ml-1 self-cent" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 16L12 8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 13L11.913 15.913V15.913C11.961 15.961 12.039 15.961 12.087 15.913V15.913L15 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 15L3 16L3 19C3 20.1046 3.89543 21 5 21L19 21C20.1046 21 21 20.1046 21 19L21 16L21 15" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+        </div>
+    </div>
+    <div id="content" class="w-full flex-col flex items-center gap-10">
+        <div id="introduction" class="relative w-11/12">
+            <img class="absolute right-0 w-1/2 h-full" src="/public/img/Banner.svg" alt="">
+            <div class="w-1/2 m-11">
+                <h1><span class="whitespace-nowrap"><span class=" text-[48px]">Hello, I'm </span> <span class=" font-extrabold text-[48px] whitespace-nowrap"> Francesc Mayola.</span></span> <br>
+                    <span class="whitespace-nowrap"><span class=" font-extrabold text-[48px] whitespace-nowrap">Full Stack </span> <span class=" font-extrabold text-white text-[48px] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"> Developer</span></span><br>
+                    <span class=" text-[48px]">based in</span> <span class=" text-[48px] font-extrabold">Catalonia</span>
+                </h1>
+
+                <p class=" text-[16px] text-[#71717A] pt-5 pb-20">Welcome to my digital portfolio! I'm a developer specializing in website and mobile application creation, with experience in diverse software projects tailored to client needs. I have developed systems for inventory management, educational platforms, and interactive learning games. My work focuses on delivering innovative solutions by applying advanced programming tools and techniques. Let's connect if you're interested in collaborating on custom digital solutions that make an impact.</p>
+                <div class="absolute -bottom-1 flex flex-row gap-6">
+                    <a href="./notFound.html" class="social bg-black"><img src="/public/img/facebook.svg" alt="facebook icon"></a>
+                    <a href="./notFound.html" class="social"><img src="/public/img/redit.svg" alt="reddit icon"></a>
+                    <a href="./notFound.html" class="social"><img src="/public/img/twiter.svg" alt="twitter icon"></a>
+                    <a href="./notFound.html" class="social"><img src="/public/img/discord.svg" alt="discord icon"></a>
+                </div>
+            </div> 
+        </div>        
+        <div id="skills" class="w-full flex flex-col items-center">
+            <h2 class=" text-[48px] mb-20 mt-20">My <span class=" text-[48px] font-extrabold">Skills</span></h2>
+            <div class="w-11/12 flex flex-row flex-wrap justify-center gap-20">
+                <div class="skills ">
+                    <img src="/public/img/git.svg" alt="git icon">
+                    <p>Git</p>
+                </div>
+                <div class="skills  bg-black text-white">
+                    <img src="/public/img/js.svg" alt="javascript icon">
+                    <p>Javascript</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/php.svg" alt="php icon">
+                    <p>PHP</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/sql.svg" alt="sql icon">
+                    <p>SQL</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/html.svg" alt="html icon">
+                    <p>HTML</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/react.svg" alt="react icon">
+                    <p>React</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/unity.svg" alt="unity icon">
+                    <p>Unity</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/astro.svg" alt="astro icon">
+                    <p>Astro</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/next.svg" alt="nextjs icon">
+                    <p>NextJS</p>
+                </div>
+                <div class="skills ">
+                    <img src="/public/img/windev.svg" alt="WinDev icon">
+                    <p>WinDev</p>
+                </div>
+            </div>
+        </div>
+        <div id="experience" class="text-white bg-black w-full flex flex-col items-center">
+            <h2 class=" text-[48px] mb-20 mt-20">My <span class=" text-[48px] font-extrabold">Experience</span></h2>
+            <div class="w-10/12 flex flex-col items-center gap-5 pb-20">
+                <div class="exp">
+                    <h3>Tecofisa S.L.</h3>
+                    <p>Summer of 2021</p>
+                    <p>As a hardware and software technical assistant, managing support calls to solve customer problems with the company's services and programs. Also, application development using Windev.</p>
+                </div>
+                <div class="exp bg-[#d4d4d82f]" style="border-color: black;">
+                    <h3>(CFGS) Internships with Dipsalut</h3>
+                    <p>2021-2022</p>
+                    <p>Creation of an educational game to take to primary schools. The basis of the game was to teach the consequences of the bite of the tiger mosquito and how to prevent them.</p>
+                </div>
+                <div class="exp">
+                    <h3>(CFGS) Internship at Palamós Hospital</h3>
+                    <p>2019-2020</p>
+                    <p>Hardware and Software changes and updates.</p>
+                </div>
+            </div>
+        </div>
+        <div id="aboutme" class="flex flex-col items-center w-full mb-20 mt-20">
+            <div class="w-10/12 flex flex-row flex-nowrap gap-20">
+                <img class="w-1/2 h-full" src="/public/img/persona.svg" alt="personatge animat">
+                <div class="w-1/2">
+                    <h2 class=" text-[48px] mb-10 mt-10">About <span class=" text-[48px] font-extrabold">Me</span></h2>
+                    <p class="text-[#71717A] text-[16px]">Third-year Computer Engineering student, with an intermediate degree in Microcomputer and Network Systems (SMX) and a higher degree in Multiplatform Application Development (DAM), both completed in Palamós. I am a persevering and decisive person, with the ability to work in a team and individually, and with the desire to continue progressing professionally.</p>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="text-white bg-black w-full flex flex-col items-center">
+            <h2 class=" text-[48px] mb-20 mt-20">My <span class=" text-[48px] font-extrabold">Projects</span></h2>
+            <div class="proj">
+                <img src="/public/img/srdibuixos-cat.png" alt="srdibuixos-cat">
+                <div>
+                    <h3>01</h3>
+                    <h4>SrDibuixos</h4>
+                    <p>With the aim of showing his ideas and projects, the brand "SrDibuixos" was created. To achieve this, a website was developed where they could present their projects and illustrations, as well as a shop to sell the illustrations printed on clothing products.</p>
+                    <a href="https://www.srdibuixos.com/" target="_blank"><img src="/public/img/export.svg" alt="export"></a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <div id="footer" class="">
+        <p>&copy; 2020 Francesc Mayola Bertran</p>
+    </div>
 </body>
 </html>
