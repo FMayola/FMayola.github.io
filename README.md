@@ -28,4 +28,4 @@ The visual design of the website focuses on simplicity and clarity. The main dec
 The design aims to create a professional and engaging experience for users.
 
 ### Figma Project
-[Link to the Figma project](https://www.figma.com/design/zT17RUEd3OOZcg43kDm91h/Personal?node-id=0-1&t=OlToxL6dOjXpNHEr-1)
+[Link to the Figma project](https://www.figma.com/design/zT17RUEd3OOZcg43kDm91h/Personal?node-id=0-1&t=OlToxL6dOjXpNHEr-1){:target="_blank"}
