@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
         html{
@@ -110,6 +111,53 @@
         .proj div a img{
             @apply w-4;
             @apply h-full;
+        }
+        .proj:nth-of-type(2n)  {
+            /* Estils per als fills parells */
+            @apply flex-row-reverse;
+        }
+
+        @media (max-width: 760px){
+            #header{
+                @apply flex-col;
+                @apply gap-8;
+                @apply items-center;
+            }
+            #header div, #introduction div, #aboutme div img, #aboutme div div, .proj img, .proj div, #contactme div, #contactme div div{
+                @apply w-full;
+            }
+            #introduction, .proj, .proj:nth-of-type(2n), #contactme{
+                @apply flex-col;
+            }
+            #introduction img{
+                @apply relative;
+                @apply w-full;
+            }
+            #introduction div h1 span{
+                @apply whitespace-normal;
+            }
+            #aboutme div{
+                @apply flex-col;
+                @apply w-full;
+            }
+        
+        }
+        @media (max-width: 460px) {
+            #header div:nth-of-type(2){
+                @apply flex-col;
+            }
+            #contactme div h3{
+                @apply text-[18px];
+            }
+            #contactme div h2 span{
+                @apply text-[28px];
+            }
+            #footer{
+                @apply p-0;
+            }
+            #footer p{
+                @apply text-right;
+            }
         }
     </style>
 
@@ -230,7 +278,7 @@
                     <a href="https://www.srdibuixos.com/" target="_blank"><img src="/public/img/export.svg" alt="export"></a>
                 </div>
             </div>
-            <div class="proj" style="flex-direction: row-reverse !important;">
+            <div class="proj">
                 <img src="/public/img/professor-portes.png" alt="srdibuixos-cat">
                 <div>
                     <h3>02</h3>
